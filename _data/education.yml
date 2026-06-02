@@ -1,0 +1,22 @@
+- degree: Master of Science (Technology)
+  institution: Aalto University, Finland
+  dates: September 2022 – June 2025
+  details:
+    - Major in Machine Learning, Data Science and Artificial Intelligence
+  gpa: 4.54/5.0
+
+- degree: Exchange Study
+  institution: Karlsruhe Institute of Technology (KIT), Germany
+  dates: October 2023 – March 2024
+  details:
+    - Economics and Management (Wirtschaftswissenschaften)
+  gpa:
+
+- degree: Bachelor of Science and Engineering
+  institution: Tampere University, Finland
+  dates: September 2019 – May 2022
+  details:
+    - "Major: Information and Communication Technology"
+    - "Minor: Mathematics"
+    - "Second minor: Signal Processing and Machine Learning"
+  gpa: 4.79/5.0
