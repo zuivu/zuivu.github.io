@@ -1,0 +1,21 @@
+- name: Deep Learning Specialization
+  issuer: DeepLearning.AI
+  url: https://coursera.org/share/2e611db8f8e17322ac0e4aca9a6f3f2b
+  note: 5 courses
+  courses:
+    - name: Neural Networks and Deep Learning
+      url: https://coursera.org/share/9ccaf847dca7e532326a7d107b84b408
+    - name: "Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization"
+      url: https://coursera.org/share/a0d8070ff511e4a200a5ef1b08716d02
+    - name: Structuring Machine Learning Projects
+      url: https://coursera.org/share/3b74ae69f9c3cb46f29df2f51af82c52
+    - name: Convolutional Neural Networks
+      url: https://coursera.org/share/4351970488e3333f1e7ec98e5fae8749
+    - name: Sequence Models
+      url: https://coursera.org/share/836a6a3ede480f68b5e7fa74ae7d098f
+
+- name: Business Intelligence Capstone Project
+  issuer: Karlsruhe Institute of Technology (KIT)
+  url: Certificate-Capstone_2024-Vu.pdf
+  note:
+  courses: []

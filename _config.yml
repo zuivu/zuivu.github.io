@@ -1,5 +1,17 @@
 title: Duy Vu
-description: Explore my work, including experiences, projects, and research that highlight my expertise and passion for innovation. Feel free to connect for collaboration or insights.
-show_downloads: true
+author: Duy Vu
+tagline: Machine Learning · AI · Data Science
+email: zuivu.ai@gmail.com
+description: >-
+  Duy Vu — Machine Learning, AI, and Data Science. Explore my work, including
+  experiences, projects, and research. Feel free to connect for collaboration
+  or insights.
+url: https://zuivu.github.io
 google_analytics: G-FK6MY7R21Q
-theme: jekyll-theme-cayman
+
+# Build settings — no theme: we ship our own _layouts and assets.
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock

@@ -1,0 +1,125 @@
+---
+layout: default
+---
+
+<!-- Hero / About -->
+<section id="about" class="hero reveal">
+  <p class="hero__eyebrow">{{ site.tagline }}</p>
+  <h1 class="hero__name">{{ site.author }}</h1>
+  <p class="hero__lede">
+    I am passionate about Machine Learning, AI, Deep Learning, and Data Science, and I'm
+    committed to continuously expanding my knowledge in these areas. Through hands-on
+    experience, I've applied my skills across diverse projects, always embracing new
+    techniques and approaches. I take a proactive approach to my work, quickly adapting to
+    new challenges and continuously refining my expertise. I also value collaboration and
+    have gained leadership experience in guiding teams toward successful outcomes. I'm
+    eager to contribute, learn, and grow in any role I take on.
+  </p>
+  <div class="hero__actions">
+    <a class="btn btn--primary" href="mailto:{{ site.email }}">Get in touch</a>
+    {% for s in site.data.social %}
+    <a class="btn btn--ghost" href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Research & Projects -->
+<section id="projects" class="section reveal">
+  <h2 class="section__title"><span class="section__index">01</span> Research &amp; Projects</h2>
+  <div class="placeholder">
+    <p class="placeholder__title">Coming soon</p>
+    <p class="placeholder__text">Selected research and project work will be featured here.</p>
+  </div>
+</section>
+
+<!-- Professional Experience -->
+<section id="experience" class="section reveal">
+  <h2 class="section__title"><span class="section__index">02</span> Professional Experience</h2>
+  <div class="placeholder">
+    <p class="placeholder__title">Coming soon</p>
+    <p class="placeholder__text">A timeline of professional roles and highlights is on the way.</p>
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education" class="section reveal">
+  <h2 class="section__title"><span class="section__index">03</span> Education</h2>
+  <ol class="timeline">
+    {% for e in site.data.education %}
+    <li class="timeline__item">
+      <div class="timeline__dot" aria-hidden="true"></div>
+      <div class="timeline__body">
+        <p class="timeline__dates">{{ e.dates }}</p>
+        <h3 class="timeline__degree">{{ e.degree }}</h3>
+        <p class="timeline__inst">{{ e.institution }}</p>
+        {% if e.details %}
+        <ul class="timeline__details">
+          {% for d in e.details %}<li>{{ d }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+        {% if e.gpa %}<p class="timeline__gpa">GPA <strong>{{ e.gpa }}</strong></p>{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+
+<!-- Certifications -->
+<section id="certifications" class="section reveal">
+  <h2 class="section__title"><span class="section__index">04</span> Certifications</h2>
+  <div class="certs">
+    {% for c in site.data.certifications %}
+    <article class="cert">
+      <h3 class="cert__name">
+        <a href="{{ c.url | relative_url }}" target="_blank" rel="noopener">{{ c.name }}</a>
+      </h3>
+      <p class="cert__meta">
+        {{ c.issuer }}{% if c.note %} · <span class="cert__note">{{ c.note }}</span>{% endif %}
+      </p>
+      {% if c.courses and c.courses.size > 0 %}
+      <ul class="cert__courses">
+        {% for course in c.courses %}
+        <li><a href="{{ course.url }}" target="_blank" rel="noopener">{{ course.name }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="section reveal">
+  <h2 class="section__title"><span class="section__index">05</span> Skills</h2>
+  <div class="skills">
+    {% for group in site.data.skills %}
+    <div class="skills__group">
+      <h3 class="skills__label">
+        {{ group.category }}{% if group.note %}<span class="skills__note"> — {{ group.note }}</span>{% endif %}
+      </h3>
+      <ul class="chips">
+        {% for item in group.items %}<li class="chip">{{ item }}</li>{% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section reveal">
+  <h2 class="section__title"><span class="section__index">06</span> Contact</h2>
+  <p class="contact__lede">Open to collaboration and new opportunities — let's talk.</p>
+  <p class="contact__email">
+    <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+  </p>
+  <ul class="contact__links">
+    {% for s in site.data.social %}
+    <li>
+      <a href="{{ s.url }}" target="_blank" rel="noopener">
+        <span class="contact__net">{{ s.name }}</span>
+        <span class="contact__handle">{{ s.handle }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

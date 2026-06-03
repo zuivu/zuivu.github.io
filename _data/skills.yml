@@ -1,0 +1,33 @@
+- category: Programming Languages
+  note: In order of proficiency
+  items:
+    - Python
+    - C++
+    - Scala
+    - Javascript
+
+- category: Libraries
+  note:
+  items:
+    - Pandas
+    - Numpy
+    - Matplotlib
+    - PyTorch
+    - Plotly
+
+- category: Other Technologies
+  note:
+  items:
+    - Docker
+    - Kubernetes
+    - Git
+    - Gerrit
+    - MLFlow
+    - Linux/Unix
+
+- category: Languages
+  note:
+  items:
+    - "Vietnamese — Native"
+    - "English — Professional working proficiency"
+    - "Finnish — Elementary proficiency"
