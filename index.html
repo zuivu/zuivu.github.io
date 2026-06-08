@@ -20,40 +20,9 @@ layout: default
   </div>
 </section>
 
-<!-- Research & Projects -->
-<section id="projects" class="section reveal">
-  <h2 class="section__title"><span class="section__index">01</span> Research &amp; Projects</h2>
-  <div class="projects">
-    {% for p in site.data.projects %}
-    <article class="project">
-      <h3 class="project__name">{{ p.name }}</h3>
-      {% if p.sub %}<p class="project__sub">{{ p.sub }}</p>{% endif %}
-      <ul class="project__bullets">
-        {% for b in p.bullets %}<li>{{ b }}</li>{% endfor %}
-      </ul>
-    </article>
-    {% endfor %}
-  </div>
-</section>
-
-<!-- Publications -->
-<section id="publications" class="section reveal">
-  <h2 class="section__title"><span class="section__index">02</span> Publications</h2>
-  <ul class="publications">
-    {% for pub in site.data.publications %}
-    <li class="publication">
-      <span class="publication__authors">{{ pub.authors }}</span>
-      <span class="publication__year">({{ pub.year }})</span>
-      <span class="publication__title">{{ pub.title }}</span>
-      {% if pub.status %}<span class="publication__status">[{{ pub.status }}]</span>{% endif %}
-    </li>
-    {% endfor %}
-  </ul>
-</section>
-
 <!-- Professional Experience -->
 <section id="experience" class="section reveal">
-  <h2 class="section__title"><span class="section__index">03</span> Professional Experience</h2>
+  <h2 class="section__title"><span class="section__index">01</span> Professional Experience</h2>
   <ol class="timeline">
     {% for job in site.data.experience %}
     <li class="timeline__item">
@@ -70,6 +39,41 @@ layout: default
     </li>
     {% endfor %}
   </ol>
+</section>
+
+<!-- Publications -->
+<section id="publications" class="section reveal">
+  <h2 class="section__title"><span class="section__index">02</span> Publications</h2>
+  <ul class="publications">
+    {% for pub in site.data.publications %}
+    <li class="publication">
+      <span class="publication__authors">{{ pub.authors }}</span>
+      <span class="publication__year">({{ pub.year }})</span>
+      {% if pub.url %}
+      <a class="publication__title" href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+      {% else %}
+      <span class="publication__title">{{ pub.title }}</span>
+      {% endif %}
+      {% if pub.status %}<span class="publication__status">[{{ pub.status }}]</span>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<!-- Research & Projects -->
+<section id="projects" class="section reveal">
+  <h2 class="section__title"><span class="section__index">03</span> Research &amp; Projects</h2>
+  <div class="projects">
+    {% for p in site.data.projects %}
+    <article class="project">
+      <h3 class="project__name">{{ p.name }}</h3>
+      {% if p.sub %}<p class="project__sub">{{ p.sub }}</p>{% endif %}
+      <ul class="project__bullets">
+        {% for b in p.bullets %}<li>{{ b }}</li>{% endfor %}
+      </ul>
+    </article>
+    {% endfor %}
+  </div>
 </section>
 
 <!-- Education -->
@@ -134,23 +138,4 @@ layout: default
     </div>
     {% endfor %}
   </div>
-</section>
-
-<!-- Contact -->
-<section id="contact" class="section reveal">
-  <h2 class="section__title"><span class="section__index">07</span> Contact</h2>
-  <p class="contact__lede">Open to collaboration and new opportunities — let's talk.</p>
-  <p class="contact__email">
-    <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-  </p>
-  <ul class="contact__links">
-    {% for s in site.data.social %}
-    <li>
-      <a href="{{ s.url }}" target="_blank" rel="noopener">
-        <span class="contact__net">{{ s.name }}</span>
-        <span class="contact__handle">{{ s.handle }}</span>
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
 </section>
