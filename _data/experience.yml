@@ -1,0 +1,29 @@
+- title: Machine Learning Engineering
+  company: Nokia, Espoo
+  team: MN RAN L1 Software
+  dates: May 2021 – Ongoing
+  bullets:
+    - "Develop, maintain and run components of the end-to-end ML pipeline:"
+    - "— Data generation, verification, processing, and exploratory data analysis"
+    - "— Model training, finetuning, quantization, and evaluation"
+    - Cross-functional communications and planning for model training workflow development
+    - Design and create interpretability tools for the deep learning model
+    - "Libraries: Pytorch, Plotly, Captum, Matplotlib"
+    - "Tools: Amazon S3, MLflow, Kubeflow, Docker, Gerrit, Grafana, Linux, PlantUML"
+
+- title: Teaching Assistant
+  company: Tampere University
+  team: "2020 – 2022  ·  Aalto University  ·  2023"
+  dates:
+  bullets:
+    - "Courses: Introduction to Machine Learning and Pattern Recognition, Computer Vision, Information Visualization"
+    - Provide support to students regarding lecture content and homework
+    - Evaluate homeworks and exams
+
+- title: Research Assistant
+  company: Tampere University
+  team: "2020 – 2021"
+  dates:
+  bullets:
+    - "CIVIT Lab — Build a pipeline to extract gaze data (Pupil Core eye tracking), run object detection (Detectron2), and analyse gaze from mother to infant. Extended as BSc thesis: 5.0/5.0"
+    - "Cloud and Web Engineering group — Retrieve data from Apache's GitHub repositories; develop a tool to detect refactoring in repository histories using RefactoringMiner"
