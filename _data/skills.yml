@@ -2,7 +2,10 @@
   note: In order of proficiency
   items:
     - Python
+    - Matlab
     - C++
+    - R
+    - Spark
     - Scala
     - Javascript
 
@@ -15,6 +18,12 @@
     - PyTorch
     - Plotly
 
+- category: Database
+  note:
+  items:
+    - SQL
+    - MongoDB
+
 - category: Other Technologies
   note:
   items:
@@ -24,6 +33,17 @@
     - Gerrit
     - MLFlow
     - Linux/Unix
+
+- category: Industry Knowledge
+  note:
+  items:
+    - Agile Methodology
+    - Software Design
+
+- category: Backend Development
+  note:
+  items:
+    - Flask
 
 - category: Languages
   note:
