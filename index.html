@@ -7,13 +7,10 @@ layout: default
   <p class="hero__eyebrow">{{ site.tagline }}</p>
   <h1 class="hero__name">{{ site.author }}</h1>
   <p class="hero__lede">
-    I am passionate about Machine Learning, AI, Deep Learning, and Data Science, and I'm
-    committed to continuously expanding my knowledge in these areas. Through hands-on
-    experience, I've applied my skills across diverse projects, always embracing new
-    techniques and approaches. I take a proactive approach to my work, quickly adapting to
-    new challenges and continuously refining my expertise. I also value collaboration and
-    have gained leadership experience in guiding teams toward successful outcomes. I'm
-    eager to contribute, learn, and grow in any role I take on.
+    Passionate about AI &amp; Data Science, with knowledge spanning multiple branches and
+    real-world applications. Continuously learning and applying AI techniques across various
+    domains. Proactive, quick to adapt, and always ready to acquire new skills as needed.
+    Strong leadership and teamwork mindset, driving innovation while growing with others.
   </p>
   <div class="hero__actions">
     <a class="btn btn--primary" href="mailto:{{ site.email }}">Get in touch</a>
@@ -26,24 +23,58 @@ layout: default
 <!-- Research & Projects -->
 <section id="projects" class="section reveal">
   <h2 class="section__title"><span class="section__index">01</span> Research &amp; Projects</h2>
-  <div class="placeholder">
-    <p class="placeholder__title">Coming soon</p>
-    <p class="placeholder__text">Selected research and project work will be featured here.</p>
+  <div class="projects">
+    {% for p in site.data.projects %}
+    <article class="project">
+      <h3 class="project__name">{{ p.name }}</h3>
+      {% if p.sub %}<p class="project__sub">{{ p.sub }}</p>{% endif %}
+      <ul class="project__bullets">
+        {% for b in p.bullets %}<li>{{ b }}</li>{% endfor %}
+      </ul>
+    </article>
+    {% endfor %}
   </div>
+</section>
+
+<!-- Publications -->
+<section id="publications" class="section reveal">
+  <h2 class="section__title"><span class="section__index">02</span> Publications</h2>
+  <ul class="publications">
+    {% for pub in site.data.publications %}
+    <li class="publication">
+      <span class="publication__authors">{{ pub.authors }}</span>
+      <span class="publication__year">({{ pub.year }})</span>
+      <span class="publication__title">{{ pub.title }}</span>
+      {% if pub.status %}<span class="publication__status">[{{ pub.status }}]</span>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
 </section>
 
 <!-- Professional Experience -->
 <section id="experience" class="section reveal">
-  <h2 class="section__title"><span class="section__index">02</span> Professional Experience</h2>
-  <div class="placeholder">
-    <p class="placeholder__title">Coming soon</p>
-    <p class="placeholder__text">A timeline of professional roles and highlights is on the way.</p>
-  </div>
+  <h2 class="section__title"><span class="section__index">03</span> Professional Experience</h2>
+  <ol class="timeline">
+    {% for job in site.data.experience %}
+    <li class="timeline__item">
+      <div class="timeline__dot" aria-hidden="true"></div>
+      <div class="timeline__body">
+        <h3 class="timeline__degree">{{ job.title }}</h3>
+        <p class="timeline__inst">{{ job.company }}{% if job.team %} · {{ job.team }}{% endif %}</p>
+        {% if job.bullets %}
+        <ul class="timeline__details">
+          {% for b in job.bullets %}<li>{{ b }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
 </section>
 
 <!-- Education -->
 <section id="education" class="section reveal">
-  <h2 class="section__title"><span class="section__index">03</span> Education</h2>
+  <h2 class="section__title"><span class="section__index">04</span> Education</h2>
   <ol class="timeline">
     {% for e in site.data.education %}
     <li class="timeline__item">
@@ -66,7 +97,7 @@ layout: default
 
 <!-- Certifications -->
 <section id="certifications" class="section reveal">
-  <h2 class="section__title"><span class="section__index">04</span> Certifications</h2>
+  <h2 class="section__title"><span class="section__index">05</span> Certifications</h2>
   <div class="certs">
     {% for c in site.data.certifications %}
     <article class="cert">
@@ -90,7 +121,7 @@ layout: default
 
 <!-- Skills -->
 <section id="skills" class="section reveal">
-  <h2 class="section__title"><span class="section__index">05</span> Skills</h2>
+  <h2 class="section__title"><span class="section__index">06</span> Skills</h2>
   <div class="skills">
     {% for group in site.data.skills %}
     <div class="skills__group">
@@ -107,7 +138,7 @@ layout: default
 
 <!-- Contact -->
 <section id="contact" class="section reveal">
-  <h2 class="section__title"><span class="section__index">06</span> Contact</h2>
+  <h2 class="section__title"><span class="section__index">07</span> Contact</h2>
   <p class="contact__lede">Open to collaboration and new opportunities — let's talk.</p>
   <p class="contact__email">
     <a href="mailto:{{ site.email }}">{{ site.email }}</a>
