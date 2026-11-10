@@ -7,13 +7,14 @@ layout: default
   <p class="hero__eyebrow">{{ site.tagline }}</p>
   <h1 class="hero__name">{{ site.author }}</h1>
   <p class="hero__lede">
-    Passionate about AI &amp; Data Science, with knowledge spanning multiple branches and
-    real-world applications. Continuously learning and applying AI techniques across various
-    domains. Proactive, quick to adapt, and always ready to acquire new skills as needed.
-    Strong leadership and teamwork mindset, driving innovation while growing with others.
+    Machine Learning Engineer at Nokia with 5+ years building end-to-end ML pipelines for
+    deep learning-based 5G/6G receivers: data generation, training, quantization, evaluation,
+    and interpretability. Also experienced in LLM evaluation for RAG chatbots. MSc in Machine
+    Learning, Data Science and AI (Aalto University). Python, PyTorch, MLflow, Kubeflow, Docker.
   </p>
   <div class="hero__actions">
     <a class="btn btn--primary" href="mailto:{{ site.email }}">Get in touch</a>
+    <a class="btn btn--ghost" href="{{ '/Duy_Vu_Resume.pdf' | relative_url }}" target="_blank" rel="noopener">Resume (PDF)</a>
     {% for s in site.data.social %}
     <a class="btn btn--ghost" href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a>
     {% endfor %}
@@ -28,6 +29,7 @@ layout: default
     <li class="timeline__item">
       <div class="timeline__dot" aria-hidden="true"></div>
       <div class="timeline__body">
+        {% if job.dates %}<p class="timeline__dates">{{ job.dates }}</p>{% endif %}
         <h3 class="timeline__degree">{{ job.title }}</h3>
         <p class="timeline__inst">{{ job.company }}{% if job.team %} · {{ job.team }}{% endif %}</p>
         {% if job.bullets %}

@@ -1,29 +1,48 @@
-- title: Machine Learning Engineering
-  company: Nokia, Espoo
+- title: Machine Learning Engineer
+  company: Nokia, Espoo, Finland
   team: MN RAN L1 Software
-  dates: May 2021 – Ongoing
+  dates: May 2021 – Present (joined as ML Trainee)
   bullets:
-    - "Develop, maintain and run components of the end-to-end ML pipeline:"
+    - "Develop, maintain, and run components of the end-to-end ML pipeline for deep learning-based 5G/6G physical-layer receivers:"
     - "— Data generation, verification, processing, and exploratory data analysis"
-    - "— Model training, finetuning, quantization, and evaluation"
-    - Cross-functional communications and planning for model training workflow development
-    - Design and create interpretability tools for the deep learning model
-    - "Libraries: Pytorch, Plotly, Captum, Matplotlib"
-    - "Tools: Amazon S3, MLflow, Kubeflow, Docker, Gerrit, Grafana, Linux, PlantUML"
+    - "— Model training, fine-tuning, quantization, and evaluation"
+    - Plan and coordinate model training workflow development with cross-functional teams
+    - Design and build interpretability tools for the deep learning receiver, including Neural Activation Pattern (NAP)-based concept discovery and out-of-distribution (OOD) detection
+    - "Tech: PyTorch, Captum, Plotly, Matplotlib, Amazon S3, MLflow, Kubeflow, Docker, Gerrit, Grafana, Linux, PlantUML"
+
+- title: ML Engineer – LLM Evaluation (Volunteer)
+  company: Tanzania AI Community × AaltoAI
+  team: Twiga
+  dates: April 2026 – July 2026
+  bullets:
+    - Built an automated evaluation system for Twiga, a RAG-based WhatsApp chatbot for Tanzanian teachers (Meta Llama Impact Grant awardee)
+    - Co-curated a 500-question evaluation dataset across school subjects, generating questions from textbook chunks with LLMs and hand-reviewing them for quality
+    - "Implemented RAG evaluation metrics: faithfulness, answer relevancy, factual correctness, LLM-as-a-judge, and lexical matching (ROUGE)"
+    - Benchmarked 2 production LLMs on the dataset and surfaced results in a Streamlit dashboard
+    - "Tech: Python, Ragas, DeepEval, LangSmith, OpenAI API, Llama, Streamlit, pandas, pytest"
 
 - title: Teaching Assistant
-  company: Tampere University
-  team: "2020 – 2022  ·  Aalto University  ·  2023"
-  dates:
+  company: Aalto University, Finland
+  team:
+  dates: 2023
   bullets:
-    - "Courses: Introduction to Machine Learning and Pattern Recognition, Computer Vision, Information Visualization"
-    - Provide support to students regarding lecture content and homework
-    - Evaluate homeworks and exams
+    - "Course: Information Visualization"
+    - Supported students with lecture content and assignments
+    - Graded assignments and exams
+
+- title: Teaching Assistant
+  company: Tampere University, Finland
+  team:
+  dates: 2020 – 2022
+  bullets:
+    - "Courses: Introduction to Machine Learning and Pattern Recognition, Computer Vision"
+    - Supported students with lecture content and assignments
+    - Graded assignments and exams
 
 - title: Research Assistant
-  company: Tampere University
-  team: "2020 – 2021"
-  dates:
+  company: Tampere University, Finland
+  team:
+  dates: 2020 – 2021
   bullets:
-    - "CIVIT Lab — Build a pipeline to extract gaze data (Pupil Core eye tracking), run object detection (Detectron2), and analyse gaze from mother to infant. Extended as BSc thesis: 5.0/5.0"
-    - "Cloud and Web Engineering group — Retrieve data from Apache's GitHub repositories; develop a tool to detect refactoring in repository histories using RefactoringMiner"
+    - "CIVIT Lab — Built a pipeline to extract gaze data (Pupil Core eye tracking), run object detection (Detectron2), and analyze mother-to-infant gaze; extended into BSc thesis (grade 5/5)"
+    - "Cloud and Web Engineering group — Mined Apache's GitHub repositories and developed a tool to detect refactorings in repository histories using RefactoringMiner"

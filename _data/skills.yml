@@ -2,26 +2,40 @@
   note: In order of proficiency
   items:
     - Python
-    - Matlab
+    - MATLAB
     - C++
     - R
-    - Spark
     - Scala
-    - Javascript
+    - JavaScript
+    - SQL
 
 - category: Libraries
   note:
   items:
-    - Pandas
-    - Numpy
-    - Matplotlib
     - PyTorch
+    - TensorFlow
+    - scikit-learn
+    - Captum
+    - pandas
+    - NumPy
+    - Matplotlib
     - Plotly
+    - Streamlit
+
+- category: LLM & Generative AI
+  note:
+  items:
+    - LLM Evaluation
+    - Retrieval-Augmented Generation (RAG)
+    - LLM-as-a-Judge
+    - Ragas
+    - DeepEval
+    - LangSmith
+    - OpenAI API
 
 - category: Database
   note:
   items:
-    - SQL
     - MongoDB
 
 - category: Other Technologies
@@ -31,7 +45,10 @@
     - Kubernetes
     - Git
     - Gerrit
-    - MLFlow
+    - MLflow
+    - Kubeflow
+    - Apache Spark
+    - Amazon S3
     - Linux/Unix
 
 - category: Industry Knowledge

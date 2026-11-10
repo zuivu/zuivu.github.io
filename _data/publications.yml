@@ -1,5 +1,5 @@
-- authors: "Tuononen, M., Vu, D., Korpi, D., Starck, V., & Hautamäki, V."
+- authors: "Tuononen, M., Penttinen, H., Vu, D., Korpi, D., Starck, V., & Hautamäki, V."
   year: 2025
-  title: Refining Neural Activation Patterns for Layer-Level Concept Discovery in Neural Network-Based Receivers
-  status: In Progress
-  url:
+  title: Out-of-Distribution Detection via Channelwise Feature Aggregation in Neural Network-Based Receivers
+  status: arXiv preprint, arXiv:2505.15570
+  url: https://arxiv.org/abs/2505.15570

@@ -1,0 +1,60 @@
+---
+layout: null
+permalink: /resume/
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{ site.author }} – Resume</title>
+<style>
+  @page { size: A4; margin: 14mm 16mm; }
+  body { font-family: Arial, Helvetica, sans-serif; font-size: 10pt; line-height: 1.35; color: #000; margin: 0; }
+  h1 { font-size: 18pt; margin: 0; }
+  h2 { font-size: 11pt; text-transform: uppercase; border-bottom: 1px solid #000; margin: 12px 0 6px; padding-bottom: 2px; }
+  h3 { font-size: 10pt; margin: 6px 0 0; }
+  p { margin: 0; }
+  ul { margin: 2px 0 4px; padding-left: 16px; }
+  li { margin: 1px 0; }
+  .contact { margin: 2px 0 4px; }
+  .meta { font-style: italic; }
+</style>
+</head>
+<body>
+<h1>{{ site.author }}</h1>
+<p><strong>Machine Learning Engineer</strong></p>
+<p class="contact">Espoo, Finland | {{ site.email }} | linkedin.com/in/zuivu | github.com/zuivu | zuivu.github.io</p>
+
+<h2>Summary</h2>
+<p>Machine Learning Engineer at Nokia with 5+ years building end-to-end ML pipelines for deep learning-based 5G/6G receivers: data generation, training, quantization, evaluation, and interpretability. Also experienced in LLM evaluation for RAG chatbots. MSc in Machine Learning, Data Science and AI (Aalto University).</p>
+
+<h2>Work Experience</h2>
+{% for job in site.data.experience %}
+<h3>{{ job.title }}</h3>
+<p class="meta">{{ job.company }}{% if job.team %} – {{ job.team }}{% endif %} | {{ job.dates }}</p>
+<ul>{% for b in job.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
+{% endfor %}
+
+<h2>Education</h2>
+{% for e in site.data.education %}
+<h3>{{ e.degree }}</h3>
+<p class="meta">{{ e.institution }} | {{ e.dates }}</p>
+<ul>{% for d in e.details %}<li>{{ d }}</li>{% endfor %}{% if e.gpa %}<li>GPA: {{ e.gpa }}</li>{% endif %}</ul>
+{% endfor %}
+
+<h2>Publications</h2>
+<ul>{% for pub in site.data.publications %}<li>{{ pub.authors }} ({{ pub.year }}). {{ pub.title }}. {{ pub.status }}.</li>{% endfor %}</ul>
+
+<h2>Projects</h2>
+{% for p in site.data.projects %}
+<h3>{{ p.name }}</h3>
+<ul>{% for b in p.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
+{% endfor %}
+
+<h2>Skills</h2>
+<ul>{% for s in site.data.skills %}<li><strong>{{ s.category }}:</strong> {{ s.items | join: ", " }}</li>{% endfor %}</ul>
+
+<h2>Certifications</h2>
+<ul>{% for c in site.data.certifications %}<li>{{ c.name }} – {{ c.issuer }}</li>{% endfor %}</ul>
+</body>
+</html>
