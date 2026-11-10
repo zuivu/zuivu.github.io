@@ -13,6 +13,6 @@
 - name: AI-Based Demand Forecasting for Porsche AG
   sub: Business Intelligence Capstone Project
   bullets:
-    - Develop model pipeline — data preprocessing, training, and testing
+    - Developed the model pipeline for data preprocessing, training, and testing
     - Data analysis
     - "Build time series models: ARIMAX, XGBoost, Prophet, and a metamodel of all three"

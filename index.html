@@ -132,7 +132,7 @@ layout: default
     {% for group in site.data.skills %}
     <div class="skills__group">
       <h3 class="skills__label">
-        {{ group.category }}{% if group.note %}<span class="skills__note"> — {{ group.note }}</span>{% endif %}
+        {{ group.category }}{% if group.note %}<span class="skills__note"> ({{ group.note }})</span>{% endif %}
       </h3>
       <ul class="chips">
         {% for item in group.items %}<li class="chip">{{ item }}</li>{% endfor %}

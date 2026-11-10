@@ -3,9 +3,9 @@
   team: MN RAN L1 Software
   dates: May 2021 – Present (joined as ML Trainee)
   bullets:
-    - "Develop, maintain, and run components of the end-to-end ML pipeline for deep learning-based 5G/6G physical-layer receivers:"
-    - "— Data generation, verification, processing, and exploratory data analysis"
-    - "— Model training, fine-tuning, quantization, and evaluation"
+    - Develop, maintain, and run the end-to-end ML pipeline for deep learning-based 5G/6G physical-layer receivers
+    - Generate, verify, and process training data; perform exploratory data analysis
+    - Train, fine-tune, quantize, and evaluate models
     - Plan and coordinate model training workflow development with cross-functional teams
     - Design and build interpretability tools for the deep learning receiver, including Neural Activation Pattern (NAP)-based concept discovery and out-of-distribution (OOD) detection
     - "Tech: PyTorch, Captum, Plotly, Matplotlib, Amazon S3, MLflow, Kubeflow, Docker, Gerrit, Grafana, Linux, PlantUML"
@@ -44,5 +44,5 @@
   team:
   dates: 2020 – 2021
   bullets:
-    - "CIVIT Lab — Built a pipeline to extract gaze data (Pupil Core eye tracking), run object detection (Detectron2), and analyze mother-to-infant gaze; extended into BSc thesis (grade 5/5)"
-    - "Cloud and Web Engineering group — Mined Apache's GitHub repositories and developed a tool to detect refactorings in repository histories using RefactoringMiner"
+    - "CIVIT Lab: Built a pipeline to extract gaze data (Pupil Core eye tracking), run object detection (Detectron2), and analyze mother-to-infant gaze; extended into BSc thesis (grade 5/5)"
+    - "Cloud and Web Engineering group: Mined Apache's GitHub repositories and developed a tool to detect refactorings in repository histories using RefactoringMiner"
