@@ -1,3 +1,9 @@
+- name: Machine Learning in Production
+  issuer: DeepLearning.AI
+  url: https://coursera.org/share/a930d2aec882c64cc2ec0501e79834c0
+  note:
+  courses: []
+
 - name: Deep Learning Specialization
   issuer: DeepLearning.AI
   url: https://coursera.org/share/2e611db8f8e17322ac0e4aca9a6f3f2b
