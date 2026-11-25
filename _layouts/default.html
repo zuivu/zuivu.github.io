@@ -31,7 +31,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
   {% if site.google_analytics %}
@@ -66,7 +66,8 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      {{ site.author }}, {{ 'now' | date: "%Y" }}. Last updated {{ site.time | date: "%B %Y" }}.
+      <span class="footer__links">{% for s in site.data.social %}<a href="{{ s.url }}" rel="noopener">{{ s.name }}</a>{% endfor %}</span>
+      <span>Last updated {{ site.time | date: "%B %Y" }}</span>
     </div>
   </footer>
 
