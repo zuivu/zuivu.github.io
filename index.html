@@ -2,36 +2,34 @@
 layout: default
 ---
 
-<!-- Hero / About -->
-<section id="about" class="hero reveal">
-  <p class="hero__eyebrow">{{ site.tagline }}</p>
+<section id="about" class="hero">
   <h1 class="hero__name">{{ site.author }}</h1>
-  <p class="hero__lede">
-    Machine Learning Engineer at Nokia with 5+ years building end-to-end ML pipelines for
-    deep learning-based 5G/6G receivers: data generation, training, quantization, evaluation,
-    and interpretability. Also experienced in LLM evaluation for RAG chatbots. MSc in Machine
-    Learning, Data Science and AI (Aalto University). Python, PyTorch, MLflow, Kubeflow, Docker.
-  </p>
-  <div class="hero__actions">
-    <a class="btn btn--primary" href="mailto:{{ site.email }}">Get in touch</a>
-    <a class="btn btn--ghost" href="{{ '/Duy_Vu_Resume.pdf' | relative_url }}" target="_blank" rel="noopener">Resume (PDF)</a>
-    {% for s in site.data.social %}
-    <a class="btn btn--ghost" href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a>
-    {% endfor %}
+  <p class="hero__role">Machine learning engineer, Nokia · Espoo, Finland</p>
+  <div class="hero__lede">
+    <p>
+      Since 2021 I've worked on deep learning receivers for the 5G/6G physical layer at Nokia.
+      I cover most of the pipeline: generating training data, training and quantizing models,
+      evaluating them, and building tools to understand what the models have learned.
+    </p>
+    <p>
+      Outside Nokia, I built the evaluation setup for Twiga, a RAG chatbot that answers
+      questions for teachers in Tanzania. I have an MSc in machine learning from Aalto University.
+    </p>
   </div>
+  <p class="hero__links">
+    <a href="mailto:{{ site.email }}">{{ site.email }}</a><a href="{{ '/Duy_Vu_Resume.pdf' | relative_url }}">Resume (PDF)</a>{% for s in site.data.social %}<a href="{{ s.url }}" rel="noopener">{{ s.name }}</a>{% endfor %}
+  </p>
 </section>
 
-<!-- Professional Experience -->
-<section id="experience" class="section reveal">
-  <h2 class="section__title"><span class="section__index">01</span> Professional Experience</h2>
+<section id="experience" class="section">
+  <h2 class="section__title">Experience</h2>
   <ol class="timeline">
     {% for job in site.data.experience %}
     <li class="timeline__item">
-      <div class="timeline__dot" aria-hidden="true"></div>
-      <div class="timeline__body">
-        {% if job.dates %}<p class="timeline__dates">{{ job.dates }}</p>{% endif %}
+      <p class="timeline__dates">{{ job.dates }}</p>
+      <div>
         <h3 class="timeline__degree">{{ job.title }}</h3>
-        <p class="timeline__inst">{{ job.company }}{% if job.team %} · {{ job.team }}{% endif %}</p>
+        <p class="timeline__inst">{{ job.company }}{% if job.team %}, {{ job.team }}{% endif %}</p>
         {% if job.bullets %}
         <ul class="timeline__details">
           {% for b in job.bullets %}<li>{{ b }}</li>{% endfor %}
@@ -43,50 +41,39 @@ layout: default
   </ol>
 </section>
 
-<!-- Publications -->
-<section id="publications" class="section reveal">
-  <h2 class="section__title"><span class="section__index">02</span> Publications</h2>
+<section id="publications" class="section">
+  <h2 class="section__title">Publications</h2>
   <ul class="publications">
     {% for pub in site.data.publications %}
-    <li class="publication">
-      <span class="publication__authors">{{ pub.authors }}</span>
-      <span class="publication__year">({{ pub.year }})</span>
-      {% if pub.url %}
-      <a class="publication__title" href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a>
-      {% else %}
-      <span class="publication__title">{{ pub.title }}</span>
-      {% endif %}
-      {% if pub.status %}<span class="publication__status">[{{ pub.status }}]</span>{% endif %}
+    <li>
+      {{ pub.authors }} ({{ pub.year }}).
+      {% if pub.url %}<a class="publication__title" href="{{ pub.url }}">{{ pub.title }}</a>{% else %}<span class="publication__title">{{ pub.title }}</span>{% endif %}.
+      {% if pub.status %}<span class="publication__status">{{ pub.status }}.</span>{% endif %}
     </li>
     {% endfor %}
   </ul>
 </section>
 
-<!-- Research & Projects -->
-<section id="projects" class="section reveal">
-  <h2 class="section__title"><span class="section__index">03</span> Research &amp; Projects</h2>
-  <div class="projects">
-    {% for p in site.data.projects %}
-    <article class="project">
-      <h3 class="project__name">{{ p.name }}</h3>
-      {% if p.sub %}<p class="project__sub">{{ p.sub }}</p>{% endif %}
-      <ul class="project__bullets">
-        {% for b in p.bullets %}<li>{{ b }}</li>{% endfor %}
-      </ul>
-    </article>
-    {% endfor %}
-  </div>
+<section id="projects" class="section">
+  <h2 class="section__title">Projects</h2>
+  {% for p in site.data.projects %}
+  <article class="project">
+    <h3 class="project__name">{{ p.name }}</h3>
+    {% if p.sub %}<p class="project__sub">{{ p.sub }}</p>{% endif %}
+    <ul class="project__bullets">
+      {% for b in p.bullets %}<li>{{ b }}</li>{% endfor %}
+    </ul>
+  </article>
+  {% endfor %}
 </section>
 
-<!-- Education -->
-<section id="education" class="section reveal">
-  <h2 class="section__title"><span class="section__index">04</span> Education</h2>
+<section id="education" class="section">
+  <h2 class="section__title">Education</h2>
   <ol class="timeline">
     {% for e in site.data.education %}
     <li class="timeline__item">
-      <div class="timeline__dot" aria-hidden="true"></div>
-      <div class="timeline__body">
-        <p class="timeline__dates">{{ e.dates }}</p>
+      <p class="timeline__dates">{{ e.dates }}</p>
+      <div>
         <h3 class="timeline__degree">{{ e.degree }}</h3>
         <p class="timeline__inst">{{ e.institution }}</p>
         {% if e.details %}
@@ -94,49 +81,35 @@ layout: default
           {% for d in e.details %}<li>{{ d }}</li>{% endfor %}
         </ul>
         {% endif %}
-        {% if e.gpa %}<p class="timeline__gpa">GPA <strong>{{ e.gpa }}</strong></p>{% endif %}
+        {% if e.gpa %}<p class="timeline__gpa">GPA {{ e.gpa }}</p>{% endif %}
       </div>
     </li>
     {% endfor %}
   </ol>
 </section>
 
-<!-- Certifications -->
-<section id="certifications" class="section reveal">
-  <h2 class="section__title"><span class="section__index">05</span> Certifications</h2>
-  <div class="certs">
-    {% for c in site.data.certifications %}
-    <article class="cert">
-      <h3 class="cert__name">
-        <a href="{{ c.url | relative_url }}" target="_blank" rel="noopener">{{ c.name }}</a>
-      </h3>
-      <p class="cert__meta">
-        {{ c.issuer }}{% if c.note %} · <span class="cert__note">{{ c.note }}</span>{% endif %}
-      </p>
-      {% if c.courses and c.courses.size > 0 %}
-      <ul class="cert__courses">
-        {% for course in c.courses %}
-        <li><a href="{{ course.url }}" target="_blank" rel="noopener">{{ course.name }}</a></li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-    </article>
-    {% endfor %}
-  </div>
+<section id="certifications" class="section">
+  <h2 class="section__title">Certifications</h2>
+  {% for c in site.data.certifications %}
+  <article class="cert">
+    <h3 class="cert__name"><a href="{{ c.url | relative_url }}">{{ c.name }}</a></h3>
+    <p class="cert__meta">{{ c.issuer }}{% if c.note %}, {{ c.note }}{% endif %}</p>
+    {% if c.courses and c.courses.size > 0 %}
+    <ul class="cert__courses">
+      {% for course in c.courses %}<li><a href="{{ course.url }}">{{ course.name }}</a></li>{% endfor %}
+    </ul>
+    {% endif %}
+  </article>
+  {% endfor %}
 </section>
 
-<!-- Skills -->
-<section id="skills" class="section reveal">
-  <h2 class="section__title"><span class="section__index">06</span> Skills</h2>
+<section id="skills" class="section">
+  <h2 class="section__title">Skills</h2>
   <div class="skills">
     {% for group in site.data.skills %}
-    <div class="skills__group">
-      <h3 class="skills__label">
-        {{ group.category }}{% if group.note %}<span class="skills__note"> ({{ group.note }})</span>{% endif %}
-      </h3>
-      <ul class="chips">
-        {% for item in group.items %}<li class="chip">{{ item }}</li>{% endfor %}
-      </ul>
+    <div class="skills__row">
+      <h3 class="skills__label">{{ group.category }}</h3>
+      <p class="skills__items">{{ group.items | join: ", " }}{% if group.note %} <span class="skills__note">({{ group.note | downcase }})</span>{% endif %}</p>
     </div>
     {% endfor %}
   </div>
