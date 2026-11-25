@@ -10,7 +10,7 @@
     - Design and build interpretability tools for the deep learning receiver, including Neural Activation Pattern (NAP)-based concept discovery and out-of-distribution (OOD) detection
     - "Tech: PyTorch, Captum, Plotly, Matplotlib, Amazon S3, MLflow, Kubeflow, Docker, Gerrit, Grafana, Linux, PlantUML"
 
-- title: ML Engineer – LLM Evaluation (Volunteer)
+- title: ML Engineer, LLM Evaluation (Volunteer)
   company: Tanzania AI Community × AaltoAI
   team: Twiga
   dates: April 2026 – July 2026
@@ -45,4 +45,4 @@
   dates: 2020 – 2021
   bullets:
     - "CIVIT Lab: Built a pipeline to extract gaze data (Pupil Core eye tracking), run object detection (Detectron2), and analyze mother-to-infant gaze; extended into BSc thesis (grade 5/5)"
-    - "Cloud and Web Engineering group: Mined Apache's GitHub repositories and developed a tool to detect refactorings in repository histories using RefactoringMiner"
+    - "Cloud and Web Engineering group: Mined Apache’s GitHub repositories and developed a tool to detect refactorings in repository histories using RefactoringMiner"
